@@ -14,8 +14,10 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 app.use("/", routes);
 //var db ="mongodb://quotes-hp:quoteshp@cluster0-7eb65.mongodb.net/test?retryWrites=true"
-var db = "mongodb://quotes-hp:quoteshp@cluster0-shard-00-00-7eb65.mongodb.net:27017,cluster0-shard-00-01-7eb65.mongodb.net:27017,cluster0-shard-00-02-7eb65.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
+//var db = "mongodb://quotes-hp:quoteshp@cluster0-shard-00-00-7eb65.mongodb.net:27017,cluster0-shard-00-01-7eb65.mongodb.net:27017,cluster0-shard-00-02-7eb65.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
 //var db = "mongodb://heroku_9chsvb1w:am9kbli27rff74c5hv558na4vj@ds127842.mlab.com:27842/heroku_9chsvb1w" || "mongodb://localhost/quotesApp";
+
+var db="mongodb://heroku1:heroku1@ds145786.mlab.com:45786/heroku_4wrjr2ks"
 
 // Connect mongoose to our database
 mongoose.connect(db, function(error) {

@@ -1,0 +1,72 @@
+.header .navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    box-shadow: none;
+    border-bottom: 4px solid #777;
+    background-image: url("../images/bg-1.jpg");
+    background-size: cover;
+}
+#navbar{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    min-height: 100px;
+}
+#navbar .container-fluid{
+    margin-top: 20px;
+}
+
+.header .navbar-brand, 
+.header .navbar-default .navbar-nav > li > a,
+#quote-list .glyphicon-star {
+    color: white;
+}
+.divider-image{
+    background-image: url("../images/divider-2.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: contain;
+    height: 25px;
+}
+
+.quotes-section, 
+.header .navbar {
+    border-right: 1px solid #dcd7d7;
+    border-left: 1px solid #dcd7d7;
+}
+
+.quote-form, .quote-section {
+    padding: 20px;
+}
+
+#quote-list ul {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+#quote-list li {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    max-width: 300px;
+    background-color: #fff6f8;
+}
+
+#quote-list .glyphicon-trash {
+    color: red;
+}
+
+#quote-list .glyphicon-star {
+    filter: drop-shadow(0px 0px 0px #222);
+    font-size: 115%;
+}
+
+#quote-list .yellow {
+    color: #fdf905;
+}
+
+div .footer {
+    background-color: #474a50;
+    border-top: 4px solid #777;
+    padding: 20px;
+    color: white;
+}

@@ -22,10 +22,12 @@ var db="mongodb://heroku1:heroku1@ds145786.mlab.com:45786/heroku_4wrjr2ks"
 
 var auth = require('basic-auth');
 
+var isauth = false;
 var authFunc = function(req, res, next){
   var user = auth(req);
   if(user && user.pass == 'zamp'){ // Here you need some logic to validate authentication
-    next();
+       isauth=true;
+	  next();
   } else {
     res.set({
       'WWW-Authenticate': 'Basic realm="simple-admin"'
@@ -33,11 +35,9 @@ var authFunc = function(req, res, next){
   }
 };
 app.use('/', authFunc);
-app.get('/', auth, function (req, res) {
-    res.send(200, 'Authenticated');
-});
-
-app.use('/', routes)
+if(isauth) {
+	app.use('/', routes);
+}
 // Connect mongoose to our database
 mongoose.connect(db, function(error) {
   // Log any errors connecting with mongoose

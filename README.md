@@ -43,6 +43,7 @@ NPM packages
 * Navigate to the folder where the repository in Terminal.
 * Run the command `npm install` to download the required dependencies.
 * Run webpack `webpack -w` and mongodb `mongod` commands to initialize the connections and update bundle.js.
+* webpack in ./node_modules/bin/webpack
 * Then type `node server.js` in terminal inside the directory.
 * Then run below address on browser.
     localhost:3000

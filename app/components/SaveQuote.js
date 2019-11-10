@@ -72,12 +72,31 @@ var SaveQuote = React.createClass({
     },
     renderQuotes: function () {
         return this.state.savedQuotes.map(function (quotes, index) {
+			var d = new Date();
+			var month = new Array();
+			month[0] = "January";
+			month[1] = "February";
+			month[2] = "March";
+			month[3] = "April";
+			month[4] = "May";
+			month[5] = "June";
+			month[6] = "July";
+			month[7] = "August";
+			month[8] = "September";
+			month[9] = "October";
+			month[10] = "November";
+			month[11] = "December";
+
+			var cdt = new Date(quotes.created);
+			var mth = month[cdt.getMonth()].substr(0, 3);
+			var createdStr = mth + " '" +cdt.getFullYear() % 100;
             if (quotes.favorited) {
                 return (
                     <li className="list-group-item" key={index}>
                         <span className="glyphicon glyphicon-star yellow" onClick={this.handleFavorite.bind(this, quotes)}></span>
                         <span className="glyphicon glyphicon-trash pull-right" onClick={this.handleDelete.bind(this, quotes)}></span>
                         <br />{quotes.text}
+						<br />{createdStr}
                     </li>
                 );
             } else {
@@ -86,6 +105,7 @@ var SaveQuote = React.createClass({
                         <span className="glyphicon glyphicon-star" onClick={this.handleFavorite.bind(this, quotes)}></span>
                         <span className="glyphicon glyphicon-trash pull-right" onClick={this.handleDelete.bind(this, quotes)}></span>
                         <br />{quotes.text}
+						<br />{createdStr}
                     </li>
                 );
             }

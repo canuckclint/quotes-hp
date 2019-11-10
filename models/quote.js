@@ -4,6 +4,10 @@ var Schema = mongoose.Schema;
 
 var quoteSchema = new Schema({
   text: String,
+	created: {
+		type: Date,
+		default: Date.now
+	},
   favorited: {
     type: Boolean,
     default: false

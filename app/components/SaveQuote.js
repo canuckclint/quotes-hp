@@ -96,7 +96,7 @@ var SaveQuote = React.createClass({
                         <span className="glyphicon glyphicon-star yellow" onClick={this.handleFavorite.bind(this, quotes)}></span>
                         <span className="glyphicon glyphicon-trash pull-right" onClick={this.handleDelete.bind(this, quotes)}></span>
                         <br />{quotes.text}
-						<br />{createdStr}
+						<br /><span style={{float: 'right'}}>{createdStr}</span>
                     </li>
                 );
             } else {
@@ -105,7 +105,7 @@ var SaveQuote = React.createClass({
                         <span className="glyphicon glyphicon-star" onClick={this.handleFavorite.bind(this, quotes)}></span>
                         <span className="glyphicon glyphicon-trash pull-right" onClick={this.handleDelete.bind(this, quotes)}></span>
                         <br />{quotes.text}
-						<br />{createdStr}
+						<br /><span style={{float: 'right'}}>{createdStr}</span>
                     </li>
                 );
             }

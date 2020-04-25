@@ -89,7 +89,7 @@ var SaveQuote = React.createClass({
 
 			var cdt = new Date(quotes.created);
 			var mth = month[cdt.getMonth()].substr(0, 3);
-			var createdStr = mth + " '" +cdt.getFullYear();
+			var createdStr = mth + ", " +cdt.getFullYear();
             if (quotes.favorited) {
                 return (
                     <li className="list-group-item" key={index}>

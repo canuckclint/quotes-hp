@@ -17,7 +17,7 @@ app.use(express.static(__dirname + "/public"));
 //var db = "mongodb://quotes-hp:quoteshp@cluster0-shard-00-00-7eb65.mongodb.net:27017,cluster0-shard-00-01-7eb65.mongodb.net:27017,cluster0-shard-00-02-7eb65.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
 //var db = "mongodb://heroku_9chsvb1w:am9kbli27rff74c5hv558na4vj@ds127842.mlab.com:27842/heroku_9chsvb1w" || "mongodb://localhost/quotesApp";
 
-var db="mongodb://quotes-hp:quotes-hp01@cluster0.icoft.mongodb.net/heroku_4wrjr2ks_2?retryWrites=true&w=majority"
+var db="mongodb://quotes-hp:quotes-hp01@cluster0.icoft.mongodb.net/heroku_4wrjr2ks_2
 
 var auth = require('basic-auth');
 

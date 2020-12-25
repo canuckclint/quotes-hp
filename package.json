@@ -18,7 +18,7 @@
     "express": "^4.14.0",
     "express-basic-auth": "^1.2.0",
     "mongodb": "^3.2.3",
-    "mongoose": "^4.7.5",
+    "mongoose": "^5.7.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-notification-system": "^0.2.14",
